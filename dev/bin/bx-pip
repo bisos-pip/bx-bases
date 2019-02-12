@@ -330,7 +330,19 @@ class examples(icm.Cmnd):
 
         execLineEx("""apt-get install python-pip  # Installs pip 8.1.1 but has problems upgrading""")
         execLineEx("""curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py""")
-        execLineEx("""python get-pip.py""")        
+        execLineEx("""python get-pip.py""")
+
+        icm.cmndExampleMenuChapter('*Create Virtual Environments*')
+
+        icm.cmndExampleMenuSection('*Create Ephemera Virtenv*')        
+        
+        execLineEx("""echo virtualenv -p python2 /tmp/py2v1  # Create Ephemera""")
+        execLineEx("""echo virtualenv -p python3 /tmp/py3v1  # Create Ephemera""")        
+
+        icm.cmndExampleMenuSection('*Create BISOS Virtenv*')        
+        
+        execLineEx("""echo virtualenv -p python2 /bisos/venv/py2-bisos-3  # Create BISOS -- or /bisos/venv/dev-py2-bisos-3 """)
+        execLineEx("""echo virtualenv -p python3 /bisos/venv/py3-bisos-3  # Create BISOS -- or /bisos/venv/dev-py3-bisos-3 """)        
 
         icm.cmndExampleMenuChapter('*Run pip Commands*')
 
