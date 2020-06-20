@@ -101,15 +101,15 @@ g_importedCmnds = {        # Enumerate modules from which CMNDs become invokable
 *  [[elisp:(org-cycle)][| ]]  [[elisp:(org-show-subtree)][|=]] [[elisp:(show-children 10)][|V]] [[elisp:(org-tree-to-indirect-buffer)][|>]] [[elisp:(blee:ppmm:org-mode-toggle)][Nat]] [[elisp:(beginning-of-buffer)][Top]] [[elisp:(delete-other-windows)][(1)]] || ICM-Cmnd       :: /icmOverview/ parsMand= parsOpt= argsMin=0 argsMax=3 asFunc= interactive=  [[elisp:(org-cycle)][| ]]
 """
 class icmOverview(icm.Cmnd):
-    cmndParamsMandatory = [ ]
-    cmndParamsOptional = [ ]
-    cmndArgsLen = {'Min': 0, 'Max': 3,}
+    cmndParamsMandatory = []
+    cmndParamsOptional = []
+    cmndArgsLen = {'Min': 0, 'Max': 3, }
 
     @icm.subjectToTracking(fnLoc=True, fnEntry=True, fnExit=True)
     def cmnd(self,
-        interactive=False,        # Can also be called non-interactively
-        argsList=[],         # or Args-Input
-    ):
+             interactive=False,        # Can also be called non-interactively
+             argsList=[],         # or Args-Input
+             ):
         cmndOutcome = self.getOpOutcome()
         if interactive:
             if not self.cmndLineValidate(outcome=cmndOutcome):
@@ -127,7 +127,7 @@ class icmOverview(icm.Cmnd):
             return cmndOutcome
 ####+END:
 
-        moduleDescription="""
+        moduleDescription = """
 *       [[elisp:(org-show-subtree)][|=]]  [[elisp:(org-cycle)][| *Description:* | ]]
 **  [[elisp:(org-cycle)][| ]]  [Xref]          :: *[Related/Xrefs:]*  <<Xref-Here->>  -- External Documents  [[elisp:(org-cycle)][| ]]
 
@@ -330,9 +330,9 @@ class examples(icm.Cmnd):
 **  [[elisp:(beginning-of-buffer)][Top]] ================ [[elisp:(blee:ppmm:org-mode-toggle)][Nat]] [[elisp:(delete-other-windows)][(1)]]          *Imported: bxPlatformBaseDirs*  [[elisp:(org-cycle)][| ]]  [[elisp:(org-show-subtree)][|=]] 
 """
 ####+END:
-        
+
         bxpBaseDir.examples_bxPlatformBaseDirsFull()
-  
+
         return(cmndOutcome)
 
     def cmndDocStr(self): return """
@@ -341,7 +341,7 @@ class examples(icm.Cmnd):
 
 ####+BEGIN: bx:icm:python:section :title "ICM Commands"
 """
-*  [[elisp:(beginning-of-buffer)][Top]] ################ [[elisp:(blee:ppmm:org-mode-toggle)][Nat]] [[elisp:(delete-other-windows)][(1)]]    *ICM Commands*  [[elisp:(org-cycle)][| ]]  [[elisp:(org-show-subtree)][|=]] 
+*  [[elisp:(beginning-of-buffer)][Top]] ################ [[elisp:(blee:ppmm:org-mode-toggle)][Nat]] [[elisp:(delete-other-windows)][(1)]]    *ICM Commands*  [[elisp:(org-cycle)][| ]]  [[elisp:(org-show-subtree)][|=]]
 """
 ####+END:
 """
@@ -399,6 +399,7 @@ g_mainEntry = None  # or G_main
 *  [[elisp:(beginning-of-buffer)][Top]] # /Dblk-Begin/ # [[elisp:(blee:ppmm:org-mode-toggle)][Nat]] [[elisp:(delete-other-windows)][(1)]]    *= =Framework::= ICM main() =*
 """
 
+
 def classedCmndsDict():
     """
 ** Should be done here, can not be done in icm library because of the evals.
@@ -435,13 +436,14 @@ icmInfo['credits'] = __credits__
 G = icm.IcmGlobalContext()
 G.icmInfo = icmInfo
 
+
 def g_icmMain():
     """This ICM's specific information is passed to G_mainWithClass"""
     sys.exit(
         icm.G_mainWithClass(
             inArgv=sys.argv[1:],                 # Mandatory
             extraArgs=g_argsExtraSpecify,        # Mandatory
-            G_examples=g_examples,               # Mandatory            
+            G_examples=g_examples,               # Mandatory           
             classedCmndsDict=classedCmndsDict(),   # Mandatory
             mainEntry=g_mainEntry,
             g_icmPreCmnds=g_icmPreCmnds,

@@ -403,6 +403,7 @@ class examples(icm.Cmnd):
 
         execLineEx("""pip show {pipPkgName}""".format(pipPkgName=selectedPipPkg))
         execLineEx("""pip show --verbose {pipPkgName}""".format(pipPkgName=selectedPipPkg))
+        execLineEx("""pip show -f {pipPkgName}""".format(pipPkgName=selectedPipPkg))
         execLineEx("""pip uninstall {pipPkgName}""".format(pipPkgName=selectedPipPkg))
         execLineEx("""pip download {pipPkgName}""".format(pipPkgName=selectedPipPkg))
         execLineEx("""pip list --outdated --format columns     # Lists pkgs that are intersection of local and pypi""")
