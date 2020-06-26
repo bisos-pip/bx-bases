@@ -1,7 +1,8 @@
-#! /usr/bin/env python
+#!/opt/bisosProvisioner/venv/py2/bin/python
 # -*- coding: utf-8 -*-
 """\
 * TODO *[Summary]* :: An =ICM=: sets up NOTYET directory bases.
+** if anon git clone git://github.com/SomeUser/SomeRepo.git if auth git clone git@github.com:UserName/OtherRepo.git
 """
 
 ####+BEGIN: bx:icm:python:top-of-file :partof "bystar" :copyleft ""

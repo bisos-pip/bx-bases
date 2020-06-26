@@ -1,9 +1,0 @@
-#
-# NOTYET, this will replace ./bx-gitMapBases
-#
-#  Concept of bx-gitMap is the mapping of 
-#  Remote Git Hierarchy To Local Git Hierarchy
-#
-# When renaming, the ../setup.py needs to be edited as well.
-#
-#
