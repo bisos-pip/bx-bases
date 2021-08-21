@@ -1,0 +1,18 @@
+RefactoringTool: Skipping optional fixer: buffer
+RefactoringTool: Skipping optional fixer: idioms
+RefactoringTool: Skipping optional fixer: set_literal
+RefactoringTool: Skipping optional fixer: ws_comma
+RefactoringTool: Refactored ./bx-bases/py3/bin/bx-bases
+RefactoringTool: Files that were modified:
+RefactoringTool: ./bx-bases/py3/bin/bx-bases
+--- ./bx-bases/py3/bin/bx-bases	(original)
++++ ./bx-bases/py3/bin/bx-bases	(refactored)
+@@ -161,7 +161,7 @@
+         if actions[0] == "all":
+             actions = ['moduleDescription', 'moduleUsage', 'moduleStatus']
+         for each in actions:
+-            print each
++            print(each)
+             if interactive:
+                 #print( str( __doc__ ) )  # This is the Summary: from the top doc-string
+                 #version(interactive=True)
