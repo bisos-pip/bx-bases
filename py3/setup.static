@@ -40,32 +40,25 @@ def longDescription():
 ####+END:
 
 # :installed "0.22" --- Forces a specific version
-####+BEGIN: b:py3:pypi/nextVersion :increment 0.01
+####+BEGIN: b:py3:pypi/nextVersion :increment 0.01 :installed "0.16"
 
-# ./pypiUploadVer does not exist -- pypiNextVer=0.20 -- installedVersion=0.16
 def pkgVersion():
+    pypiUploadVerFile = pathlib.Path('./pypiUploadVer')
+    if pypiUploadVerFile.is_file() :
+        return '0.18'   # Version Nu To Be Uploaded
+    else:
         return '0.16'  # Version Nu Of Installed Pkg
 
 ####+END:
 
-####+BEGIN: b:py3:pypi/requires :requirements "requirements.txt" :extras ()
+####+BEGIN: b:py3:pypi/requires :extras ()
 
 requires = [
-'bisos',
-'bisos.b',
-'bisos.bx-bases',
-'bisos.common',
-'bisos.currents',
-'bisos.examples',
-'bisos.platform',
-'bisos.transit',
-'blee',
-'blee.icmPlayer',
-'enum34',
-'plumbum',
-'rpyc',
-'unisos.icm',
-'unisos.ucf',
+"blee",
+"blee.icmPlayer",
+"bisos",
+"bisos.b",
+"bisos.common",
 ]
 ####+END:
 
@@ -73,7 +66,6 @@ requires = [
 
 scripts = [
 './bin/bx-bases',
-'./bin/bx-gitReposBases',
 './bin/bx-isoSrBases.py',
 './bin/bx-pip',
 ]

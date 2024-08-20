@@ -1,0 +1,15 @@
+bisos==0.3
+bisos.b==0.42
+bisos.bx-bases==0.19
+bisos.common==0.73
+bisos.currents==0.6
+bisos.examples==0.7
+bisos.platform==0.13
+bisos.transit==0.2
+blee==0.3
+blee.icmPlayer==0.5
+enum34==1.1.10
+plumbum==1.8.3
+rpyc==6.0.0
+unisos.icm==0.26
+unisos.ucf==0.15
