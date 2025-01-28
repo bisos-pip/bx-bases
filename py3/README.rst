@@ -2,12 +2,19 @@
 bisos.bx-bases: Python scripts (Command Services) used for bootstrapping the BISOS environment.
 ===============================================================================================
 
-:Author: Mohsen BANAN
-:Date:   <2024-02-19 Mon 16:27>
-
 .. contents::
    :depth: 3
 ..
+
+Panel Controls:: `Show-All <elisp:(show-all)>`__
+`Overview <elisp:(org-shifttab)>`__
+`Content <elisp:(progn (org-shifttab) (org-content))>`__ \|
+`(1) <elisp:(delete-other-windows)>`__ \|
+`S&Q <elisp:(progn (save-buffer) (kill-buffer))>`__
+`Save <elisp:(save-buffer)>`__ `Quit <elisp:(kill-buffer)>`__
+`Bury <elisp:(bury-buffer)>`__ Links:
+`file:./panels/_nodeBase_/fullUsagePanel-en.org <./panels/_nodeBase_/fullUsagePanel-en.org>`__
+(Package Panel)
 
 Overview
 ========
