@@ -83,7 +83,7 @@ G = cs.globalContext.get()
 G.icmLibsAppend = __file__
 G.csCmndsLibsAppend = __file__
 
-from blee.icmPlayer import bleep
+from bisos.csPlayer import bleep
 
 ####+END:
 
@@ -315,7 +315,7 @@ class examples(cs.Cmnd):
         
         cs.examples.commonBrief()    
 
-        bleep.examples_icmBasic()
+        bleep.examples_csBasic()
 
 
 ####+BEGIN: bx:cs:python:cmnd:subSection :title "Imported: bxPlatformBaseDirs"
